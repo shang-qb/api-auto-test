@@ -1,0 +1,29 @@
+# 文章接口测试数据
+test_get_article_list:
+  - case_name: "正常分页查询"
+    pageNum: 1
+    pageSize: 10
+    expected_code: 200
+  - case_name: "查询第二页"
+    pageNum: 2
+    pageSize: 5
+    expected_code: 200
+  - case_name: "带关键词搜索"
+    pageNum: 1
+    pageSize: 10
+    keyword: "测试"
+    expected_code: 200
+
+test_save_article:
+  - case_name: "正常发布文章"
+    title: "测试文章标题"
+    content: "这是测试文章内容"
+    userId: 1
+    categoryId: 1
+    expected_code: 200
+  - case_name: "标题为空"
+    title: ""
+    content: "内容"
+    userId: 1
+    categoryId: 1
+    expected_code: 200

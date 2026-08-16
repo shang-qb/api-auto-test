@@ -1,0 +1,12 @@
+# 评论接口测试数据
+test_get_comment_list:
+  - case_name: "正常查询评论列表"
+    articleId: 1
+    expected_code: 200
+
+test_save_comment:
+  - case_name: "正常发表评论"
+    articleId: 1
+    userId: 1
+    content: "这是一条测试评论"
+    expected_code: 200

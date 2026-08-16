@@ -1,0 +1,21 @@
+# 用户接口测试数据
+test_login:
+  - case_name: "正常登录"
+    username: "admin"
+    password: "123456"
+    expected_code: 200
+  - case_name: "密码错误"
+    username: "admin"
+    password: "wrongpass"
+    expected_code: 401
+  - case_name: "用户不存在"
+    username: "notexist"
+    password: "123456"
+    expected_code: 401
+
+test_register:
+  - case_name: "正常注册"
+    username: "testuser001"
+    password: "123456"
+    email: "test001@example.com"
+    expected_code: 200
